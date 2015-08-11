@@ -621,4 +621,68 @@ valor da chave combustivel: 200
 valor da chave motor: 4500
 >>> # Tratamento de Erros
 ... 
+>>> lst=[]
+>>> for i in range(3):
+...     while 1:
+...             try:
+...                     lst.append(int(raw_input('Digite um valor: ')))
+...             break
+  File "<stdin>", line 5
+    break
+        ^
+SyntaxError: invalid syntax
+>>> for i in range(3):
+...     while 1:
+...             try:
+...                     lst.append(int(raw_input('Digite um valor: ')))
+...                     break
+...             except:
+...                     print('Digite somente numeros!!!')
+... 
+Digite um valor: 8
+Digite um valor: a
+Digite somente numeros!!!
+Digite um valor: a
+Digite somente numeros!!!
+Digite um valor: a
+Digite somente numeros!!!
+Digite um valor: a
+Digite somente numeros!!!
+Digite um valor: a
+Digite somente numeros!!!
+Digite um valor: 3
+Digite um valor: s
+Digite somente numeros!!!
+Digite um valor: s
+Digite somente numeros!!!
+Digite um valor: s
+Digite somente numeros!!!
+Digite um valor: 9
+>>> print lst
+[8, 3, 9]
+>>> 1./3
+0.3333333333333333
+>>> 1/3
+0
+>>> 2/3
+0
+>>> 3/3
+1
+>>> 3./3
+1.0
+>>> x = int(raw_input('Digite um numero inteiro: '))
+Digite um numero inteiro: -3
+>>> while x < 3:
+...     try:
+...             print 1./x
+...     except:
+...             print 'Nao eh possivel dividir 1 por %i' %x
+...     x+=1
+... 
+-0.333333333333
+-0.5
+-1.0
+Nao eh possivel dividir 1 por 0
+1.0
+0.5
 >>> 
