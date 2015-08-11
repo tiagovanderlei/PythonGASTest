@@ -325,4 +325,300 @@ SyntaxError: invalid syntax
 abacaxi eh amarelo
 >>> print 'O valor de pi eh %fs' %constante
 O valor de pi eh 3.140000s
+>>> # Manipulacao de listas
+... 
+>>> a=[1,2]
+>>> a.append("teste")
+>>> a
+[1, 2, 'teste']
+>>> a.extend('teste')
+>>> a
+[1, 2, 'teste', 't', 'e', 's', 't', 'e']
+>>> b
+0
+>>> b.extend('teste')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'int' object has no attribute 'extend'
+>>> b=''
+>>> b.extend('teste')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'str' object has no attribute 'extend'
+>>> b=[]
+>>> b.extend('teste')
+>>> b
+['t', 'e', 's', 't', 'e']
+>>> b
+['t', 'e', 's', 't', 'e']
+>>> b.insert(1, '-')
+>>> b
+['t', '-', 'e', 's', 't', 'e']
+>>> b.insert(1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: insert() takes exactly 2 arguments (1 given)
+>>> b.remove(1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: list.remove(x): x not in list
+>>> b
+['t', '-', 'e', 's', 't', 'e']
+>>> b.remove('-')
+>>> b
+['t', 'e', 's', 't', 'e']
+>>> b.insert(3, ':)')
+>>> b
+['t', 'e', 's', ':)', 't', 'e']
+>>> b.pop(3)
+':)'
+>>> b
+['t', 'e', 's', 't', 'e']
+>>> b.count('e')
+2
+>>> # Parte IV - Testes, Loops, Varreduras
+... 
+>>> b=0
+>>> 
+>>> while b < 5
+  File "<stdin>", line 1
+    while b < 5
+              ^
+SyntaxError: invalid syntax
+>>> while b < 5
+  File "<stdin>", line 1
+    while b < 5
+              ^
+SyntaxError: invalid syntax
+>>> while b < 5:
+... print b
+  File "<stdin>", line 2
+    print b
+        ^
+IndentationError: expected an indented block
+>>> b=0
+>>> while b < 5:
+...     print b
+...     b=b+1
+... 
+0
+1
+2
+3
+4
+>>> b=1
+>>> while b < 5:
+...     print '%i dolares valem %.2f reais' %(b, b*2.98)
+...     b=b+1
+... 
+1 dolares valem 2.98 reais
+2 dolares valem 5.96 reais
+3 dolares valem 8.94 reais
+4 dolares valem 11.92 reais
+>>> b
+5
+>>> b+=8
+>>> b
+13
+>>> a = raw_imput('Tam. lado quadrado')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'raw_imput' is not defined
+>>> a = raw_input('Tam. lado quadrado')
+Tam. lado quadrado4
+>>> a = raw_input('Tam. lado quadrado: ')
+Tam. lado quadrado: 5
+>>> a = raw_input('Tam. lado quadrado: '):
+  File "<stdin>", line 1
+    a = raw_input('Tam. lado quadrado: '):
+                                         ^
+SyntaxError: invalid syntax
+>>> a = raw_input('Tam. lado quadrado: ')
+Tam. lado quadrado: 23
+>>> a
+'23'
+>>> print 'o perimetro deste quadrado eh: %f' %(flt(a))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'flt' is not defined
+>>> print 'o perimetro deste quadrado eh: %f' %(float(a))
+o perimetro deste quadrado eh: 23.000000
+>>> print 'o perimetro deste quadrado eh: %f' %(float(a)*4)
+o perimetro deste quadrado eh: 92.000000
+>>> type(a)
+<type 'str'>
+>>> 'ola '*4
+'ola ola ola ola '
+>>> # condicionais if, elif, else
+... 
+>>> x = vapor
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'vapor' is not defined
+>>> x = 'vapor'
+>>> if(x == 'liquido')
+  File "<stdin>", line 1
+    if(x == 'liquido')
+                     ^
+SyntaxError: invalid syntax
+>>> if(x == 'liquido'):
+...     print 'Menos de 100 graus C'
+... elif (x == 'vapor'):
+...     print 'Mais de 100 graus C';
+... else
+  File "<stdin>", line 5
+    else
+       ^
+SyntaxError: invalid syntax
+>>> if(x == 'liquido'):
+...     print 'Menos de 100 graus C'
+... elif (x == 'vapor'):
+...     print 'Mais de 100 graus C';
+... else
+  File "<stdin>", line 5
+    else
+       ^
+SyntaxError: invalid syntax
+>>> if(x == 'liquido'):
+...     print 'Menos de 100 graus C'
+... elif (x == 'vapor'):
+...     print 'Mais de 100 graus C';
+... else:
+...     'Menos de 0 graus C'
+... 
+Mais de 100 graus C
+>>> x = raw_input('Informe a fase: ')
+Informe a fase: 
+>>> if(x == 'liquido'):
+...      print 'Menos de 100 graus C'
+... elif (x == 'vapor'):
+...      print 'Mais de 100 graus C';
+... else:
+...      'Menos de 0 graus C'
+... 
+'Menos de 0 graus C'
+>>> x = raw_input('Informe a fase: ')
+Informe a fase: 
+>>> if(x == 'liquido'):
+...      print 'Menos de 100 graus C'
+... elif (x == 'vapor'):
+...      print 'Mais de 100 graus C';
+... else:
+...      'Menos de 0 graus C'
+... 
+'Menos de 0 graus C'
+>>> if(x == 'liquido'):
+...      print 'Menos de 100 graus C'
+... 
+>>> x = raw_input('Informe a fase: ')
+Informe a fase: 
+>>> x = raw_input('Informe a fase: ')
+Informe a fase: liquido
+>>> x = raw_input('Informe a fase: ')
+Informe a fase: liquido
+>>> if(x == 'liquido'):
+...      print 'Menos de 100 graus C'
+... elif (x == 'vapor'):
+...      print 'Mais de 100 graus C';
+... else:
+...      'Menos de 0 graus C'
+... 
+Menos de 100 graus C
+>>> a=['Joao', 'Rafael', 'Douglas']
+>>> a
+['Joao', 'Rafael', 'Douglas']
+>>> for i in a:
+...     print i
+... 
+Joao
+Rafael
+Douglas
+>>> for x in a:
+...     print('%s tem %i letras' %(x, len(x)))
+... 
+Joao tem 4 letras
+Rafael tem 6 letras
+Douglas tem 7 letras
+>>> range(1,10)
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> range(0,10)
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> for k in range(0,10):
+...     print(k)
+... 
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+>>> print x,
+Douglas
+>>> 
+>>> print a print b
+  File "<stdin>", line 1
+    print a print b
+                ^
+SyntaxError: invalid syntax
+>>> print a; print b
+['Joao', 'Rafael', 'Douglas']
+13
+>>> print a, print b
+  File "<stdin>", line 1
+    print a, print b
+                 ^
+SyntaxError: invalid syntax
+>>> # for em dicionario
+... 
+>>> orcamento = {'asa':1200, 'combustivel':200, 'motor':4500}
+>>> for x in orcamento:
+...     print x
+... 
+asa
+combustivel
+motor
+>>> for x in orcamento:
+...     print 'valor da chave %s: %i' %(x, orcamento(x))
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+TypeError: 'dict' object is not callable
+>>> for x in orcamento:
+...     print 'valor da chave %s: %i' %(x, orcamento(x))
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+TypeError: 'dict' object is not callable
+>>> type(orcamento[1])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 1
+>>> type(orcamento['combuustivel'])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'combuustivel'
+>>> type(orcamento['combustivel'])
+<type 'int'>
+>>> for x in orcamento:
+...     print 'valor da chave %s: %i' %(x, orcamento[x])
+... 
+valor da chave asa: 1200
+valor da chave combustivel: 200
+valor da chave motor: 4500
+>>> orcamento
+{'asa': 1200, 'combustivel': 200, 'motor': 4500}
+>>> orcamento.items()
+[('asa', 1200), ('combustivel', 200), ('motor', 4500)]
+>>> for x in orcamento.items():
+...     print 'valor da chave %s: %i' %(x[0], x[1])
+... 
+valor da chave asa: 1200
+valor da chave combustivel: 200
+valor da chave motor: 4500
+>>> # Tratamento de Erros
+... 
 >>> 
