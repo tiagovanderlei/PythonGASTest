@@ -1,0 +1,328 @@
+Last login: Tue Aug 11 09:12:50 on ttys001
+mac-mobile:~ tiagovanderlei$ py
+pydbgp.py         pydoc2.6          python            python2.6         pythonw           pyuic4
+pydbgpproxy.py    pydoc2.7          python-config     python2.6-config  pythonw2.5        
+pydoc             pylupdate4        python2.5         python2.7         pythonw2.6        
+pydoc2.5          pyrcc4            python2.5-config  python2.7-config  pythonw2.7        
+mac-mobile:~ tiagovanderlei$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+mac-mobile:~ tiagovanderlei$ python
+Python 2.7.5 (default, Mar  9 2014, 22:15:05) 
+[GCC 4.2.1 Compatible Apple LLVM 5.0 (clang-500.0.68)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> a=1
+>>> b=2
+>>> a == b
+False
+>>> a != b
+True
+>>> a <> b
+True
+>>> a > b
+False
+>>> A < b
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'A' is not defined
+>>> a < b
+True
+>>> 2 * a >= b
+True
+>>> ## Potencias
+... 
+>>> 
+>>> 2**3
+8
+>>> 2**(3+6)
+512
+>>> 7%2
+1
+>>> 2**(3+6) % 7
+1
+>>> valor1=2
+>>> valor1
+2
+>>> type(valor1)
+<type 'int'>
+>>> valor1="Boa tarde!"
+>>> valor1
+'Boa tarde!'
+>>> type(valor1)
+<type 'str'>
+>>> palavra='termodinamica'
+>>> palavra='termodinâmica'
+>>> palavra
+'termodina\xcc\x82mica'
+>>> palavra
+'termodina\xcc\x82mica'
+>>> print palavra
+termodinâmica
+>>> palavra[0]
+'t'
+>>> palavra[1]
+'e'
+>>> palavra[2]
+'r'
+>>> palavra[3]
+'m'
+>>> palavra[4]
+'o'
+>>> palavra[9:12]
+'\xcc\x82m'
+>>> palavra[0:12]
+'termodina\xcc\x82m'
+>>> palavra[0:5]
+'termo'
+>>> palavra[5:]
+'dina\xcc\x82mica'
+>>> palavra[:9]
+'termodina'
+>>> print palavra[:]
+termodinâmica
+>>> palavra[1:8]
+'ermodin'
+>>> palavra[1:8:2]
+'emdn'
+>>> palavra[::2]
+'troia\x82ia'
+>>> palavra[1:0]
+''
+>>> palavra[7:0]
+''
+>>> palavra[7:0:-1]
+'nidomre'
+>>> palavra[0:7:1]
+'termodi'
+>>> palindromo="socorram me subi no onibus em marrocos"
+>>> palondromo
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'palondromo' is not defined
+>>> palindromo
+'socorram me subi no onibus em marrocos'
+>>> palindromo.trim
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'str' object has no attribute 'trim'
+>>> palindromo.strip()
+'socorram me subi no onibus em marrocos'
+>>> palindromo.replace(' ','')
+'socorrammesubinoonibusemmarrocos'
+>>> palindromo.replace(' ','') == palindromo[::-1]
+False
+>>> palindromo.replace(' ','') == palindromo[::-1].replace(' ','')
+True
+>>> palavra
+'termodina\xcc\x82mica'
+>>> palavra=palavra+' aplicada'
+>>> palavra
+'termodina\xcc\x82mica aplicada'
+>>> palavra[14:]
+'a aplicada'
+>>> palavra[18:]
+'licada'
+>>> palavra[17:]
+'plicada'
+>>> palavra[16:]
+'aplicada'
+>>> len(palavra)
+24
+>>> valor1
+'Boa tarde!'
+>>> valor2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'valor2' is not defined
+>>> valor2=2
+>>> valor2
+2
+>>> type valor2
+  File "<stdin>", line 1
+    type valor2
+              ^
+SyntaxError: invalid syntax
+>>> type(valor2)
+<type 'int'>
+>>> type(str(valor2))
+<type 'str'>
+>>> type(valor2)
+<type 'int'>
+>>> lista=[1,2,3]
+>>> lista
+[1, 2, 3]
+>>> lista=[1,2;3,4]
+  File "<stdin>", line 1
+    lista=[1,2;3,4]
+              ^
+SyntaxError: invalid syntax
+>>> lista=[1;2]
+  File "<stdin>", line 1
+    lista=[1;2]
+            ^
+SyntaxError: invalid syntax
+>>> lista=[1:2]
+  File "<stdin>", line 1
+    lista=[1:2]
+            ^
+SyntaxError: invalid syntax
+>>> lista=[1,2]
+>>> lista
+[1, 2]
+>>> lista=[1,2,3,4]
+>>> lista2=[4,3,2,1]
+>>> lista*lista2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can't multiply sequence by non-int of type 'list'
+>>> lista + 4
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can only concatenate list (not "int") to list
+>>> lista 
+[1, 2, 3, 4]
+>>> lista[0]
+1
+>>> lista[0] + lista[2]
+4
+>>> lista = lista + [4]
+>>> lsita
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'lsita' is not defined
+>>> lista
+[1, 2, 3, 4, 4]
+>>> lista[0:3]
+[1, 2, 3]
+>>> lista[1:3]
+[2, 3]
+>>> lista[0:4]
+[1, 2, 3, 4]
+>>> lista=lista[0:4]
+>>> lista=lista + [0,0,0]
+>>> lsita
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'lsita' is not defined
+>>> lista
+[1, 2, 3, 4, 0, 0, 0]
+>>> lista[-1]
+0
+>>> lista[-2]
+0
+>>> lista[-4]
+4
+>>> lista[2:-2]
+[3, 4, 0]
+>>> #matriz = cjto de vetores
+... .
+  File "<stdin>", line 2
+    .
+    ^
+SyntaxError: invalid syntax
+>>> matriz=[[1,2,3],[0,-1,1],[3,3,3]]
+>>> matriz
+[[1, 2, 3], [0, -1, 1], [3, 3, 3]]
+>>> matriz[2,1]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: list indices must be integers, not tuple
+>>> matriz[2][1]
+3
+>>> matriz[1][1]
+-1
+>>> tupl=(1,2,3)
+>>> tupl
+(1, 2, 3)
+>>> tupl(0)=4
+  File "<stdin>", line 1
+SyntaxError: can't assign to function call
+>>> tupl=((1,2,3),(0,9,8))
+>>> tupl[1][2]
+8
+>>> a,b = 0,'Deu certo'
+>>> a,b = 0,'Deu certo?'
+>>> a
+0
+>>> b
+'Deu certo?'
+>>> a,b=b,a
+>>> a
+'Deu certo?'
+>>> b
+0
+>>> # Dicionarios
+... 
+>>> aurelio={'denomiacao':'ilha solteira', 'populacao':23000,'renda':1500}
+>>> aurelio
+{'denomiacao': 'ilha solteira', 'renda': 1500, 'populacao': 23000}
+>>> aurelio['vocacao']='turismo'
+>>> aurelio
+{'denomiacao': 'ilha solteira', 'vocacao': 'turismo', 'renda': 1500, 'populacao': 23000}
+>>> aurelio[renda]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'renda' is not defined
+>>> aurelio['renda']
+1500
+>>> aurelio.keys
+<built-in method keys of dict object at 0x7fc34050e300>
+>>> aurelio.keys()
+['denomiacao', 'vocacao', 'renda', 'populacao']
+>>> # Formatando objetos
+... 
+>>> constante = 3.14
+>>> constante
+3.14
+>>> print 'O valor de pi eh %f' %constante
+O valor de pi eh 3.140000
+>>> nome=abacaxi
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'abacaxi' is not defined
+>>> nome='abacaxi'
+>>> caract='amarelo'
+>>> print '%s eh %s', %(nome,caract)
+  File "<stdin>", line 1
+    print '%s eh %s', %(nome,caract)
+                      ^
+SyntaxError: invalid syntax
+>>> print '%s eh %s' %(nome,caract)
+abacaxi eh amarelo
+>>> print 'O valor de pi eh %fs' %constante
+O valor de pi eh 3.140000s
+>>> 
