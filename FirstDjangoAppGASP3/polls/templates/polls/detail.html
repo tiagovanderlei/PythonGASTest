@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+
+</script>
+
+<div class="container">
+
+<h1>{{ question.question_text }}</h1>
+
+<div class="table-responsive">
+
+<table id="tabela" class="table table-hover table-condensed">
+	<thead>
+	<tr>
+		<td><h4>Escolha</h4></td>
+		<td><h4>Votos</h4></td>
+	</tr>
+	</thead>
+	<tbody>
+{% for choice in question.choice_set.all %}
+		<tr>
+			<td>
+				{{ choice.choice_text }}
+			</td>
+			<td>
+				{{ choice.votes }}
+			</td>
+		</tr>
+
+{% endfor %}
+
+	<button type="button" class="btn btn-primary"> Gravar </button>
+
+	</tbody>
+</table>
+
+</div>
+
+</div>
